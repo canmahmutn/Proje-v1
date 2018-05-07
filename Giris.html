@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Lacrimosa-Giris</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#kayıt").click(function(){
+          $(".form1").slideToggle("fast");
+          $(".form2").hide("fast");
+        });
+      });
+      $(document).ready(function(){
+        $("#giris").click(function(){
+          $(".form2").slideToggle("fast");
+          $(".form1").hide("fast");
+        });
+      });
+    </script>
+    <style media="screen">
+    body{
+      margin:0;
+      padding: 0;
+      background-color: #9ea2a8;
+    }
+/*Navbar*/
+.navbar{
+width: 20%;
+display: block;
+margin: 0 auto;
+margin-top: 7%;
+}
+ul{
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 20px;
+  text-decoration: none;
+}
+li a:hover{
+  background-color: #00BD4B;
+}
+/*Forms*/
+.inputs{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.submit{
+  cursor: pointer;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: gray;
+  font-size: 15px;
+}
+.submit:hover{
+  background-color: #00BD4B;
+}
+.form1{
+  display: none;
+}
+.form2{
+  display: none;
+}
+
+    </style>
+  </head>
+  <body>
+
+
+    <div class="navbar">
+      <ul>
+        <li><a id="kayıt" href="#">Kayıt Ol</a></li>
+        <li><a id="giris" href="#">Giriş Yap</a></li>
+      </ul>
+      <form class="form1" autocomplete="off" action="Kayit.php" method="post">
+      <input class="inputs" type="text" name="ad" placeholder="Adınız">
+      <input class="inputs" type="text" name="soyad" placeholder="Soyadınız">
+      <input class="inputs" type="text" name="email" placeholder="Email">
+      <input class="inputs" type="password" name="sifre" placeholder="Şifreniz">
+      <input class="inputs" type="password" name="sifre_tekrar" placeholder="Şifrenizi tekrar girin">
+      <input class="submit" type="submit" name="kayit" value="Kaydı Tamamla">
+      </form>
+      <form class="form2" autocomplete="off" action="Giris_Kontrol.php" method="post">
+      <input class="inputs" type="text" name="email" placeholder="Email">
+      <input class="inputs" type="password" name="sifre" placeholder="Şifreniz">
+      <input class="submit" type="submit" name="kayit" value="Giriş">
+      </form>
+    </div>
+
+
+
+  </body>
+</html>
